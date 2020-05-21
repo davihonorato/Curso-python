@@ -7,7 +7,7 @@
 
 from PYTHON_POO.AApessoa import Pessoa  # Importa a classe
 
-p1 = Pessoa('Davi', 18)
+p1 = Pessoa('Davi', 18)  # Cria um objeto p1 com nome e idade
 p1.falar('animes')
 p1.falar('series')
 p1.parar_falar()
