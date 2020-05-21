@@ -19,4 +19,3 @@ p1.falar('maçã')
 p1.parar_comer()
 print(Pessoa.ano_atual)  # Imprime o ano atual
 print(p1.get_ano_nascimento())  # Ano de nascimento de p1
-
