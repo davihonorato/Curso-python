@@ -1,7 +1,10 @@
 from time import sleep
+from datetime import date
 
 
 class Pessoa:
+    ano_atual = date.today().year
+
     def __init__(self, nome, idade, falando=False, comendo=False):  # Método principal.
         # Variáveis podem ser importadas em qualquer função/scopo dentro da classe.
         self.nome = nome
@@ -52,3 +55,7 @@ class Pessoa:
 
         print(f'{self.nome} parou de comer.')
         self.comendo = False
+
+    def get_ano_nascimento(self):
+        nascimento = self.ano_atual - self.idade
+        return nascimento
