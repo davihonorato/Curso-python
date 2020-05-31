@@ -4,22 +4,31 @@
 
 class Clientes:
     def __init__(self):
-        self.lista = dict()
+        self.__lista = {}  # Recomenda-se estritamente não modificar essa variável
 
-    def adicionar(self, id, nome):
-        if 'clientes' not in self.lista:
-            self.lista['clientes'] = {id, nome}
+    def adicionar_cliente(self, id, nome):
+        if 'clientes' not in self.__lista:
+            self.__lista['clientes'] = {id: nome}
         else:
-            self.lista['clientes'].upddate({id, nome})
+            self.__lista['clientes'].update({id: nome})
 
     def listar_clientes(self):
-        if 'clientes' not in self.lista:
+        if 'clientes' not in self.__lista:
             print('A lista está vazia.')
         else:
-            for id, nome in self.lista['clientes'].items():
+            for id, nome in self.__lista['clientes'].items():
                 print(id, nome)
+
+    def deletar_cliente(self, id):
+        del self.__lista['clientes'][id]
 
 
 user = Clientes()
-user.adicionar(189, 'Davi')
+user.adicionar_cliente(189, 'Davi')
+user.adicionar_cliente(123, 'yan')
+user.adicionar_cliente(198, 'lorena')
+user.__lista = 'Outra coisa'  # Variável criada pelo programa. Caso queira acessar
+# a variável da classe, terá que instanciar da seguinte forma: user._Pessoas__lista
+user.listar_clientes()
+user.deletar_cliente(123)
 user.listar_clientes()
