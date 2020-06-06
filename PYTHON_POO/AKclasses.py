@@ -4,15 +4,21 @@ class Pessoa:  # Superclasse
         self.idade = idade
         self.nomeclasse = self.__class__.__name__
 
-    def falar(self):  # função de todas as classes
+    def falar(self):
         print(f'{self.nomeclasse} está falando...')
 
 
-class Cliente(Pessoa):  # A classe "Cliente" herda tudo da classe "Pessoa". Classe filha
-    def comprar(self):  # Função usada apenas para Cliente
-        print(f'{self.nomeclasse} está comprando...')
+class Cliente(Pessoa):
+    def falar(self):
+        print('Você está em CLIENTE.')
 
 
-class Aluno(Pessoa):  # A classe "Aluno" herda tudo da classe "Pessoa". Classe filha
-    def estudar(self):  # Função usada apenas para Aluno
-        print(f'{self.nomeclasse} está estudando...')
+class ClienteVIP(Cliente):
+    def __init__(self, nome, idade, sobrenome):
+        Pessoa.__init__(self, nome, idade)
+        self.sobrenome = sobrenome
+
+    def falar(self):
+        Pessoa.falar(self)
+        Cliente.falar(self)
+        print(f'{self.nome} {self.sobrenome}')
