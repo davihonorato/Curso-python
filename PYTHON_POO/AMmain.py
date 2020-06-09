@@ -8,4 +8,6 @@ from PYTHON_POO.AMcp import ContaPoupanca
 
 
 cp = ContaPoupanca(1111, 2222, 50)
-cp.sacar(25)
+cp.sacar(250)
+cp.depositar(500)
+cp.sacar(250)

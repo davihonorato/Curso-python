@@ -33,6 +33,12 @@ class Conta(ABC):
             raise ValueError('O valor precisa ser numérico.')
 
         self._saldo += valor
+        self.detalhes()
+
+    def detalhes(self):
+        print(f'AGENCIA: {self._agencia}', end=' | ')
+        print(f'CONTA: {self._conta}', end=' | ')
+        print(f'SALDO: {self._saldo}')
 
     @abstractmethod
     def sacar(self, valor):
