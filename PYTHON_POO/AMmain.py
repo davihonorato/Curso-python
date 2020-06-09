@@ -5,9 +5,15 @@
 # instânciada.
 
 from PYTHON_POO.AMcp import ContaPoupanca
+from PYTHON_POO.AMcc import ContaCorrente
 
 
 cp = ContaPoupanca(1111, 2222, 50)
 cp.sacar(250)
 cp.depositar(500)
 cp.sacar(250)
+
+print('########################################')
+
+cc = ContaCorrente(1111, 3333, 200, 500)
+cc.sacar(250)
