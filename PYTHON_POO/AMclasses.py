@@ -1,0 +1,1 @@
+# Será criado uma classe abstrata que serve como "classe principal" para as outras.
