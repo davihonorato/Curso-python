@@ -4,3 +4,5 @@ i1 = Interface()
 i1.mostrar()
 
 print('########################')
+
+i1.chamar_metodo_da_interface()
