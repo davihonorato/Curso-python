@@ -2,4 +2,5 @@ from PYTHON_POO.ASbibliotecas import Biblioteca
 
 
 class Interface:
-    pass
+    def mostrar(self):
+        print('Vai mostrar essa frase.')
