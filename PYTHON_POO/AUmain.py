@@ -1,3 +1,5 @@
 from PYTHON_POO import AUumalinha
+from PYTHON_POO import AUvariaslinhas
 
-help(AUumalinha)
+# help(AUumalinha)
+help(AUvariaslinhas)
